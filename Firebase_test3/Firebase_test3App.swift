@@ -18,7 +18,6 @@
 
 import SwiftUI
 import FirebaseCore
-import FirebaseFirestore
 import FirebaseAuth
 import GoogleSignIn
 
@@ -33,9 +32,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     }
     //Googleアカウントログインのための初期化コード
-    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
-        return GIDSignIn.sharedInstance.handle(url)
-    }
+//    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
+//        return GIDSignIn.sharedInstance.handle(url)
+//    }
 }
 
 
@@ -44,6 +43,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct Firebase_test3App: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
     var body: some Scene {
         WindowGroup {
                 ContentView()
